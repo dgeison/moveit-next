@@ -3,8 +3,10 @@ import { ChallengesContext } from "../contexts/ChallengesContext";
 import styles from "../styles/components/ChallengeBox.module.css";
 
 export function ChallengeBox() {
+  const contextData = useContext(ChallengesContext);
 
-    
+  console.log(contextData);
+
   const hashActiveChallenge = true;
 
   return (
@@ -12,7 +14,7 @@ export function ChallengeBox() {
       {hashActiveChallenge ? (
         <div className={styles.challengeActive}>
           <header>Ganhe 400px</header>
-          
+
           <main>
             <img src="icons/body.svg" />
             <strong>Novo desafio</strong>
